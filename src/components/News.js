@@ -22,7 +22,7 @@ export class News extends Component {
 }
 
   async componentDidMount(){
-    let url="https://newsapi.org/v2/top-headlines?country=in&apiKey=f46f99398f1a4fd0b1d9ceed16864903";
+    let url="https://newsapi.org/v2/top-headlines?country=in&apiKey=useYourKeyHere";   // put your key in the place
     // let data = await fetch(url).then((res) => res.json())
     // .then((json) => {
     //     this.setState({

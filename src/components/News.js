@@ -41,7 +41,7 @@ export class News extends Component {
   render() {
     return (
       <div className="container my-3">
-        <h1> News Headlines  <span style={{backgroundColor:"orange",padding:"0px 22px" ,borderRadius:"4px"}}>#AsliNews</span>  </h1>
+        <h1> News Headlines    </h1>
         <div className="row">
 
         

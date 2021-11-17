@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import data from '../sampleoutput.json'
 
 import {
     
@@ -6,8 +7,27 @@ import {
   } from "react-router-dom";
 
 export class NavBar extends Component {
+
+    constructor(){
+        super();
+        this.state={
+            query:''
+        }
+        let newsFilter;
+    }
+
     static propTypes = {
 
+    }
+
+    //experimental search
+    handleSearch=(event)=>{
+        console.log(event.target.value);
+        this.query=event.target.value;
+        this.newsFilter=data.filter((value)=>{
+            return value.title.includes(this.query)||value.description.includes(this.query) ;
+        })
+        console.log(this.newsFilter);
     }
 
     render() {
@@ -59,10 +79,12 @@ export class NavBar extends Component {
                         <a className="nav-link disabled">Disabled</a>
                         </li> */}
                     </ul>
-                    {/* <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form> */}
+                    
+                    {/* <span className="d-flex">
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={this.handleSearch} />
+                        <button className="btn btn-outline-success"  onClick={this.handleSearch}>Search</button>
+                    </span> */}
+                    
                     </div>
                 </div>
                 </nav>

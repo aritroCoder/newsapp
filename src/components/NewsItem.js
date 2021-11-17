@@ -9,7 +9,7 @@ export class NewsItem extends Component {
         return (
             <div className="my-3">
                <div className="card" >
-                    <span class="position-absolute top-0 translate-middle badge rounded-pill bg-primary" style={{left:"90%", zIndex:"1"}}>
+                    <span className="position-absolute top-0 translate-middle badge rounded-pill bg-primary" style={{left:"90%", zIndex:"1"}}>
                             {source}
                     </span>
                     <img src={imageUrl?imageUrl:"https://static.toiimg.com/thumb/msid-78740738,width-1070,height-580,imgsize-48340,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"} className="card-img-top" alt="..." />
